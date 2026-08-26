@@ -210,6 +210,171 @@ p {
   text-transform: uppercase;
 }
 
+.about-profile {
+  grid-column: 1 / -1;
+  margin-top: clamp(1rem, 3vw, 3rem);
+  padding-top: clamp(3rem, 6vw, 6rem);
+  border-top: 1px solid var(--line);
+}
+
+.about-profile__statement {
+  max-width: 1160px;
+  margin: 0 0 clamp(3rem, 6vw, 6rem);
+  color: var(--wine);
+  font-size: clamp(1.75rem, 3.2vw, 3.8rem);
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.about-profile__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.profile-card {
+  min-width: 0;
+  padding: clamp(1.6rem, 3.5vw, 3.5rem);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.profile-card h2 {
+  max-width: 720px;
+  margin: 0 0 2.2rem;
+  font-size: clamp(1.75rem, 2.8vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.profile-list,
+.principles-list,
+.direction-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-list li {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.profile-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-list strong,
+.profile-list span {
+  display: block;
+}
+
+.profile-list strong {
+  margin-bottom: 0.55rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.profile-list span,
+.experience-item p,
+.principles-list p {
+  color: var(--ink-muted);
+  font-family: var(--sans);
+  line-height: 1.62;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1.25rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.experience-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-item__years {
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-item h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.experience-item p {
+  margin: 0.55rem 0 0;
+}
+
+.principles-list li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.principles-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.principles-list li > span {
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.principles-list strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.18rem;
+  font-weight: 400;
+}
+
+.principles-list p {
+  margin: 0;
+}
+
+.direction-list {
+  counter-reset: directions;
+}
+
+.direction-list li {
+  counter-increment: directions;
+  position: relative;
+  padding: 1.3rem 0 1.3rem 3rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  line-height: 1.55;
+}
+
+.direction-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.direction-list li::before {
+  content: counter(directions, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  color: var(--wine);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
 .section--navy {
   background:
     radial-gradient(circle at 85% 8%, rgba(201, 147, 79, 0.15), transparent 28rem),
@@ -748,6 +913,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .about-profile__grid {
+    grid-template-columns: 1fr;
+  }
+
   .intro,
   .audience,
   .contacts {
@@ -756,6 +925,14 @@ p {
 
   .intro__copy {
     padding-left: 1.2rem;
+  }
+
+  .about-profile {
+    margin-top: 0;
+  }
+
+  .about-profile__statement {
+    margin-bottom: 3rem;
   }
 
   .section__head {
@@ -837,6 +1014,11 @@ p {
 
   .process__steps li {
     grid-template-columns: 2.4rem 1fr;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
   }
 
   .contacts h2 {
