@@ -143,8 +143,8 @@ a {
 
 .intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
-  gap: clamp(3rem, 8vw, 9rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   background:
     radial-gradient(circle at 95% 5%, rgba(201, 147, 79, 0.15), transparent 27rem),
     var(--paper);
@@ -157,7 +157,6 @@ p {
   overflow-wrap: break-word;
 }
 
-.intro h1,
 .section__head h2,
 .contacts h2 {
   margin: 0;
@@ -166,55 +165,8 @@ p {
   text-wrap: balance;
 }
 
-.intro h1 {
-  max-width: 850px;
-  font-size: clamp(2.6rem, 5vw, 5.8rem);
-}
-
-.intro__copy {
-  align-self: end;
-  border-left: 1px solid var(--gold);
-  padding-left: clamp(1.3rem, 3vw, 2.5rem);
-}
-
-.intro__copy p {
-  margin: 0;
-  color: var(--ink-muted);
-  font-family: var(--sans);
-  font-size: 1.02rem;
-  line-height: 1.75;
-}
-
-.intro__copy .lead {
-  margin-bottom: 1.2rem;
-  color: var(--navy);
-  font-family: var(--serif);
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  line-height: 1.45;
-}
-
-.subjects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-
-.subjects span {
-  padding: 0.6rem 0.9rem;
-  border: 1px solid var(--line);
-  font-family: var(--sans);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 .about-profile {
-  grid-column: 1 / -1;
-  margin-top: clamp(1rem, 3vw, 3rem);
-  padding-top: clamp(3rem, 6vw, 6rem);
-  border-top: 1px solid var(--line);
+  margin-top: 0;
 }
 
 .about-profile__statement {
@@ -917,14 +869,9 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .intro,
   .audience,
   .contacts {
     gap: 2.5rem;
-  }
-
-  .intro__copy {
-    padding-left: 1.2rem;
   }
 
   .about-profile {
