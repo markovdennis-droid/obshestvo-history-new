@@ -107,6 +107,10 @@ a {
   display: none;
 }
 
+.hero-mobile {
+  display: none;
+}
+
 .section {
   position: relative;
   padding: clamp(4.5rem, 8vw, 8.5rem) clamp(1.25rem, 8vw, 9rem);
@@ -452,6 +456,20 @@ p {
 .trainer__button:focus-visible {
   outline: 3px solid white;
   outline-offset: 4px;
+}
+
+.trainer__button--disabled {
+  max-width: 380px;
+  background: transparent;
+  color: var(--gold-light);
+  cursor: default;
+  line-height: 1.35;
+  opacity: 0.88;
+}
+
+.trainer__button--disabled:hover {
+  transform: none;
+  background: transparent;
 }
 
 .audience {
@@ -970,6 +988,194 @@ p {
 
   .contacts h2 {
     font-size: 2.65rem;
+  }
+}
+
+/* Mobile-only layout. Desktop styles above remain unchanged. */
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 4rem;
+  }
+
+  .hero__cover {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: grid;
+    min-height: min(760px, 100svh);
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 78% 40%, rgba(201, 147, 79, 0.16), transparent 15rem),
+      #f7f2eb;
+  }
+
+  .hero-mobile__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 1.15rem 0.75rem;
+    color: var(--navy);
+  }
+
+  .hero-mobile__emblem {
+    display: grid;
+    place-items: center;
+    width: 2.65rem;
+    height: 2.65rem;
+    border: 1px solid rgba(7, 31, 54, 0.3);
+    border-radius: 50%;
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+
+  .hero-mobile__brand strong,
+  .hero-mobile__brand small {
+    display: block;
+  }
+
+  .hero-mobile__brand strong {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero-mobile__brand small {
+    margin-top: 0.12rem;
+    color: var(--gold);
+    font-family: var(--sans);
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero-mobile__copy {
+    position: relative;
+    z-index: 2;
+    padding: 1.35rem 1.15rem 1.6rem;
+  }
+
+  .hero-mobile__title {
+    margin: 0;
+    font-size: clamp(3.7rem, 18vw, 5.35rem);
+    font-weight: 400;
+    line-height: 0.82;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-mobile__title span,
+  .hero-mobile__title strong {
+    display: block;
+  }
+
+  .hero-mobile__title strong {
+    color: var(--wine);
+    font-weight: 400;
+  }
+
+  .hero-mobile__rule {
+    width: min(100%, 18rem);
+    height: 1px;
+    margin: 1.35rem 0;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .hero-mobile__subtitle {
+    margin: 0;
+    font-size: clamp(1.2rem, 5.6vw, 1.55rem);
+    line-height: 1.13;
+  }
+
+  .hero-mobile blockquote {
+    margin: 1.15rem 0 0;
+  }
+
+  .hero-mobile blockquote p {
+    margin: 0;
+    color: rgba(7, 31, 54, 0.82);
+    font-size: 0.96rem;
+    line-height: 1.38;
+  }
+
+  .hero-mobile blockquote cite {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--wine);
+    font-size: 0.85rem;
+    font-style: normal;
+  }
+
+  .hero-mobile__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 15rem);
+    min-height: 3.5rem;
+    margin-top: 1.25rem;
+    padding: 0.85rem 1rem;
+    background: var(--navy);
+    color: var(--gold-light);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .hero-mobile__portrait {
+    min-height: 330px;
+    margin-top: -1rem;
+    background-image:
+      linear-gradient(180deg, #f7f2eb 0%, transparent 20%),
+      linear-gradient(90deg, #f7f2eb 0%, rgba(247, 242, 235, 0.92) 12%, transparent 42%),
+      url("assets/approved-cover.png");
+    background-repeat: no-repeat;
+    background-position: center, center, right center;
+    background-size: cover, cover, auto 112%;
+  }
+
+  .mobile-nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+    overflow: visible;
+    padding: 0.4rem 0.35rem;
+  }
+
+  .mobile-nav a {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    min-height: 3rem;
+    padding: 0.4rem 0.2rem;
+    font-size: clamp(0.58rem, 2.4vw, 0.7rem);
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .section {
+    padding: 3.75rem 1.1rem;
+  }
+
+  .about-profile__statement {
+    margin-bottom: 2.4rem;
+    font-size: clamp(1.55rem, 7.2vw, 2rem);
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-mobile {
+    min-height: 720px;
+  }
+
+  .hero-mobile__title {
+    font-size: clamp(3.35rem, 17vw, 4.4rem);
+  }
+
+  .hero-mobile__portrait {
+    min-height: 300px;
+    background-position: center, center, right center;
   }
 }
 
