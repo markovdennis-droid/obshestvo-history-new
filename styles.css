@@ -472,6 +472,27 @@ p {
   background: transparent;
 }
 
+.trainer--guides {
+  margin-top: clamp(3rem, 5vw, 5rem);
+  border-color: rgba(237, 199, 134, 0.75);
+  background:
+    linear-gradient(105deg, rgba(201, 147, 79, 0.3), transparent 60%),
+    rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav__accent {
+  color: var(--gold-light) !important;
+}
+
+.footer__link {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
 .audience {
   display: grid;
   grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
@@ -1135,7 +1156,7 @@ p {
 
   .mobile-nav {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
     overflow: visible;
     padding: 0.4rem 0.35rem;

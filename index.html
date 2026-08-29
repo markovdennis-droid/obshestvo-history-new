@@ -85,6 +85,13 @@
       <nav class="mobile-nav" aria-label="Навигация по странице">
         <a href="#about">О преподавателе</a>
         <a href="#preparation">Подготовка</a>
+        <a
+          class="mobile-nav__accent"
+          href="metodichki.html"
+          target="_blank"
+          rel="noopener"
+          >Методички</a
+        >
         <a href="#format">Формат</a>
         <a href="#reviews">Отзывы</a>
         <a href="#contacts">Контакты</a>
@@ -219,6 +226,28 @@
             <p>Составляем план подготовки, проводим пробные работы и анализируем ошибки.</p>
           </article>
         </div>
+
+        <aside class="trainer trainer--guides" aria-labelledby="guides-title">
+          <div class="trainer__copy">
+            <p class="eyebrow eyebrow--gold">Материалы для самостоятельной работы</p>
+            <h3 id="guides-title">Методички по истории России</h3>
+            <p>
+              Одна тема — за один вечер: теория, работа с источником, карта,
+              разбор ловушек и практикум в формате ЕГЭ с ответами. Первая
+              методичка в каждой теме — бесплатно.
+            </p>
+          </div>
+          <a
+            class="trainer__button"
+            href="metodichki.html"
+            target="_blank"
+            rel="noopener"
+            aria-label="Открыть каталог методичек (в новой вкладке)"
+          >
+            <span>Смотреть методички</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
 
         <aside class="trainer" aria-labelledby="trainer-title">
           <div class="trainer__copy">
@@ -372,7 +401,10 @@
 
     <footer class="footer">
       <p>Евгения Александровна</p>
-      <p>История · Обществознание · ОГЭ · ЕГЭ</p>
+      <p>
+        История · Обществознание · ОГЭ · ЕГЭ ·
+        <a class="footer__link" href="metodichki.html" target="_blank" rel="noopener">Методички</a>
+      </p>
       <a href="#main">Наверх ↑</a>
     </footer>
   </body>
