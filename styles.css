@@ -103,6 +103,35 @@ a {
 .hotspot--telegram { left: 7.55%; top: 82%; width: 18.85%; height: 9%; }
 .hotspot--telegram:hover { transform: translateY(-2px); }
 
+.hero__guides {
+  position: absolute;
+  left: 80%;
+  top: 4.9%;
+  display: grid;
+  place-items: center;
+  width: 16.5%;
+  height: 6.6%;
+  border-bottom: 2px solid var(--gold);
+  background: rgba(247, 242, 235, 0.82);
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: clamp(0.75rem, 1.05vw, 1.15rem);
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.hero__guides:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.hero__guides:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
 .mobile-nav {
   display: none;
 }
@@ -860,7 +889,8 @@ p {
     scroll-padding-top: 4.6rem;
   }
 
-  .hero__hotspots {
+  .hero__hotspots,
+  .hero__guides {
     display: none;
   }
 
